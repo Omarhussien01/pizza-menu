@@ -1,18 +1,10 @@
-/* eslint-disable react/jsx-key */
+
 import Pizza from "./Pizza";
 import { pizzaData } from "../data";
 
 export default function Menu() {
   const list = pizzaData.map((pizza) => {
-    return (
-      <Pizza
-        name={pizza.name}
-        ingredients={pizza.ingredients}
-        price={pizza.price}
-        photoName={pizza.photoName}
-        soldOut={pizza.soldOut}
-      />
-    );
+    return <Pizza key={pizza.name} {...pizza} />;
   });
   return (
     <main className="menu">
