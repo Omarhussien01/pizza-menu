@@ -7,7 +7,7 @@ export default function Pizza(props) {
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <span>${props.price}</span>
       </div>
     </div>
   );
